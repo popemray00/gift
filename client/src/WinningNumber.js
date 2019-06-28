@@ -2,16 +2,27 @@ import React from 'react';
 
 class WinningNumber extends React.Component {
 
-  winningNum = () => {
-    const winningNumberbetween0and50 = Math.floor(Math.random() * 5100);
-    console.log(winningNumberbetween0and50)
-
+  state = {
+    winningNum: 10,
   }
+
+  winningNumber = () => {
+    const rand = Math.floor(Math.random() * 51);
+    this.setState({winningNum: this.state.winningNum = rand})
+    if (this.state.winningNum === this.state.randnum) {
+      console.log("WINNER")
+    }
+    else {
+      console.log("Better luck next time")
+    }
+    console.log(this.state.winningNum)
+  }
+
 
 	render () {
 		return(
       <div>
-      <p>50</p>
+      <p>{this.state.winningNum}</p>
       </div>
 		)
 	}
