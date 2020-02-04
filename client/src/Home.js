@@ -1,6 +1,5 @@
 import React from 'react';
-import Prize from './Prize'
-import NumberGenerator from './NumberGenerator'
+import { Link } from 'react-router-dom';
 
 class Home extends React.Component {
 
@@ -8,9 +7,8 @@ class Home extends React.Component {
     return (
       <div>
         <div>
-         <h1>Luck Gifter</h1>
-         <Prize />
-         <NumberGenerator />
+         <h1>Welcome to Feelin Lucky</h1>
+         <button><Link to="/Instructions">Check out the Instructions </Link></button>
         </div>
       </div>
     );
