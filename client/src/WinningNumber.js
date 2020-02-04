@@ -3,12 +3,12 @@ import React from 'react';
 class WinningNumber extends React.Component {
 
   state = {
-    winningNum: 10,
+    winningNum: 12,
   }
 
   winningNumber = () => {
     const rand = Math.floor(Math.random() * 51);
-    this.setState({winningNum: this.state.winningNum = rand})
+    this.setState({winningNum: this.setState.winningNum = rand})
     if (this.state.winningNum === this.state.randnum) {
       console.log("WINNER")
     }
@@ -16,6 +16,11 @@ class WinningNumber extends React.Component {
       console.log("Better luck next time")
     }
     console.log(this.state.winningNum)
+  }
+
+  winningNumberGenerate = () => {
+    const rand = Math.floor(Math.random() * 51);
+    this.setState({winningNum: this.setState.winningNum = rand})
   }
 
 

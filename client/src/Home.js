@@ -1,5 +1,4 @@
 import React from 'react';
-import WinningNumber from './WinningNumber'
 import Prize from './Prize'
 import NumberGenerator from './NumberGenerator'
 
@@ -10,7 +9,6 @@ class Home extends React.Component {
       <div>
         <div>
          <h1>Luck Gifter</h1>
-         <WinningNumber />
          <Prize />
          <NumberGenerator />
         </div>
