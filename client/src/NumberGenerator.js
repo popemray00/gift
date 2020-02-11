@@ -3,7 +3,7 @@ import React from 'react';
 class NumberGenerator extends React.Component {
   state = {
     randnum: 0,
-    winningNum: 12,
+    winningNum: 1,
     winOrLose: " "
   }
 
@@ -16,22 +16,26 @@ class NumberGenerator extends React.Component {
   winningNumber = () => {
     const randWin = Math.floor(Math.random() * 51);
     this.setState({winningNum: randWin})
+
+    
   }
 
   handleClick = () => {
-    this.randomNumber()
+    this.randomNumber();
+    this.winningNumber();
     this.winOrLoss()
   }
-  
+
   winOrLoss = () => {
-    if ( this.state.randnum === this.state.winningNum) {
-      this.setState({winOrLose: "You did it! You WON!!!!!"})
+    if ( this.state.winningNum !== this.state.randnum) {
+      this.setState({winOrLose: "Better luck next time"}) 
+      console.log("Better luck next time")
       return this.state.winOrLose
     } 
     
     else {
-       this.setState({winOrLose: "Better luck next time"}) 
-      console.log("Better luck next time")
+      this.setState({winOrLose: "You did it! You WON!!!!!"})
+      console.log("YOU WON")
       return this.state.winOrLose
     }
   }
