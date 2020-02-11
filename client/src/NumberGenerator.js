@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'reactstrap';
 
 class NumberGenerator extends React.Component {
   state = {
@@ -16,8 +17,20 @@ class NumberGenerator extends React.Component {
   winningNumber = () => {
     const randWin = Math.floor(Math.random() * 51);
     this.setState({winningNum: randWin})
+  }
 
+  winOrLoss = () => {
+    if ( this.state.winningNum === this.state.randnum) {
+      this.setState({winOrLose: "You did it! You WON!!!!!"})
+      console.log("YOU WON")
+      alert(this.state.winOrLose)
+    } 
     
+    else {
+      this.setState({winOrLose: "Better luck next time, try again!"}) 
+      console.log("Better luck next time")
+      return this.state.winOrLose
+    }
   }
 
   handleClick = () => {
@@ -25,32 +38,23 @@ class NumberGenerator extends React.Component {
     this.winningNumber();
     this.winOrLoss()
   }
-
-  winOrLoss = () => {
-    if ( this.state.winningNum !== this.state.randnum) {
-      this.setState({winOrLose: "Better luck next time"}) 
-      console.log("Better luck next time")
-      return this.state.winOrLose
-    } 
-    
-    else {
-      this.setState({winOrLose: "You did it! You WON!!!!!"})
-      console.log("YOU WON")
-      return this.state.winOrLose
-    }
-  }
   
 
   render() {
     return(
       <div>
-        <p>{this.state.winningNum}</p>
-        <button onClick={this.handleClick}>GOOD LUCK</button>
-      <div>
-        <h1>Your Number:</h1>
-        <h1>{this.state.randnum}</h1>
-      </div>
-        <p>{this.state.winOrLose}</p>
+        <div>
+          <h2>Your winning # is...</h2>
+          <h1>{this.state.winningNum}</h1>
+        </div>
+        <div>
+          <h2>Your Number:</h2>
+          <h1>{this.state.randnum}</h1>
+          <Button color="success" onClick={this.handleClick}>GOOD LUCK!</Button>{' '}
+        </div>
+        <div>
+          <h3>{this.state.winOrLose}</h3>
+        </div>
       </div>
     )
   }

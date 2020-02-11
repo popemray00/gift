@@ -1,0 +1,20 @@
+.header {
+    text-align: center;
+    margin-top: 5%;
+    border-radius: 1%;
+    border: dotted;
+    border-style: inset;
+}
+.gameplay {
+    text-align: center;
+}
+
+#gamepage {
+    background-color: slategray;
+    margin-top: 5%;
+    border-style: inset;
+}
+
+.buttext {
+    color: white;
+}

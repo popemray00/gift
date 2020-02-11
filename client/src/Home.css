@@ -1,0 +1,18 @@
+#header {
+    text-align: center;
+}
+
+#header h1 {
+    padding-top: 2%;
+    font-size: 90px;
+}
+
+.body {
+    text-align: center;
+    margin-top: 20%;
+}
+
+.all {
+    background-color: springgreen;
+    height: 500px;
+}
