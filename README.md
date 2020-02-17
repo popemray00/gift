@@ -2,6 +2,8 @@ Welcome to Gift!
 
 To Play..
 
+Open your terminal and run - cd client 
+
 In the terminal run - npm install
 
 Then run - npm start
