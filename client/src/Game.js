@@ -17,6 +17,7 @@ class Game extends React.Component {
                 <div className='container-fluid'>
                     <div className='gameplay'>
                         <NumberGenerator />
+                        <br/>
                         <Button color="primary"><Link className="buttext" to="/" >Home</Link></Button>{' '}
                         <Button color="info"><Link className="buttext" to="/Instructions">Instructions</Link></Button>{' '}
                     </div>

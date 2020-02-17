@@ -20,23 +20,24 @@ class NumberGenerator extends React.Component {
   }
 
   winOrLoss = () => {
-    if ( this.state.winningNum === this.state.randnum) {
-      this.setState({winOrLose: "You did it! You WON!!!!!"})
-      console.log("YOU WON")
-      alert(this.state.winOrLose)
-    } 
-    
-    else {
+    if ( this.state.winningNum !== this.state.randnum) {
       this.setState({winOrLose: "Better luck next time, try again!"}) 
       console.log("Better luck next time")
       return this.state.winOrLose
+    } 
+    else {
+      this.setState({winOrLose: "You did it! You WON!!!!!"})
+      console.log("YOU WON")
+      alert("You did it! You WON!!!!!")
+      return this.state.winOrLose
+
     }
   }
 
   handleClick = () => {
+    this.winOrLoss()
     this.randomNumber();
     this.winningNumber();
-    this.winOrLoss()
   }
   
 
